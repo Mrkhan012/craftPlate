@@ -1,5 +1,9 @@
-import 'package:creaftmyplate/utils/appcolor.dart';
-import 'package:creaftmyplate/view/home/widget/bottom_sheet.dart';
+import 'package:creaftmyplate/utils/app_color.dart';
+import 'package:creaftmyplate/view/home/widget/detail_view/ExclusiveConsultationCard.dart';
+import 'package:creaftmyplate/view/home/widget/detail_view/platter_widget.dart';
+import 'package:creaftmyplate/view/home/widget/detail_view/service_card.dart';
+import 'package:creaftmyplate/view/home/widget/detail_view/share_widget.dart';
+import 'package:creaftmyplate/view/home/widget/detail_view/try_before_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -22,7 +26,7 @@ class DetailView extends StatelessWidget {
         ),
         title: Text(
           "Suggested Platters",
-          style: TextStyle(fontSize: 14.sp, color: AppColors.black),
+          style: TextStyle(fontSize: 14.sp, color: AppColors.black, fontWeight: FontWeight.w700),
         ),
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(1.h),
@@ -83,186 +87,8 @@ class DetailView extends StatelessWidget {
                       ),
                     ),
                     Gap(12.h),
-                    Card(
-                      color: AppColors.white,
-                      child: Padding(
-                        padding: EdgeInsets.all(4.w),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.all(4.w),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Image.asset(
-                                    "assets/images/dish.png",
-                                    width: 50.w,
-                                  ),
-                                  SizedBox(width: 12.w),
-                                  Expanded(
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          "Abhi’s Birthday Platter",
-                                          style: TextStyle(
-                                            fontSize: 16.sp,
-                                            fontWeight: FontWeight.w600,
-                                            color: AppColors.black,
-                                          ),
-                                        ),
-                                        SizedBox(height: 4.h),
-                                        GestureDetector(
-                                          onTap: () {
-                                            showModalBottomSheet(
-                                              backgroundColor: AppColors.white,
-                                              context: context,
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.vertical(
-                                                  top: Radius.circular(16.r),
-                                                ),
-                                              ),
-                                              isScrollControlled: true,
-                                              builder: (_) =>
-                                                  const MenuBottomSheet(),
-                                            );
-                                          },
-                                          child: Row(
-                                            children: [
-                                              Text(
-                                                "View Menu",
-                                                style: TextStyle(
-                                                  fontSize: 14.sp,
-                                                  fontWeight: FontWeight.bold,
-                                                  color: AppColors.deepPurple,
-                                                ),
-                                              ),
-                                              Icon(
-                                                CupertinoIcons.right_chevron,
-                                                size: 16.sp,
-                                                color: AppColors.black,
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            const Divider(),
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  right: 80.w, top: 12.h, left: 12.w),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        "Event",
-                                        style: TextStyle(
-                                          fontSize: 14.sp,
-                                          fontWeight: FontWeight.w600,
-                                          color: AppColors.black,
-                                        ),
-                                      ),
-                                      Text(
-                                        "Birthday",
-                                        style: TextStyle(
-                                          fontSize: 12.sp,
-                                          fontWeight: FontWeight.w600,
-                                          color: AppColors.gery,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  Column(
-                                    children: [
-                                      Text(
-                                        "Guest count",
-                                        style: TextStyle(
-                                          fontSize: 14.sp,
-                                          fontWeight: FontWeight.w600,
-                                          color: AppColors.black,
-                                        ),
-                                      ),
-                                      Text(
-                                        "120 (30 Veg)",
-                                        style: TextStyle(
-                                          fontSize: 12.sp,
-                                          fontWeight: FontWeight.w600,
-                                          color: AppColors.gery,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  right: 80.w, top: 12.h, left: 12.w),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        "Date",
-                                        style: TextStyle(
-                                          fontSize: 14.sp,
-                                          fontWeight: FontWeight.w600,
-                                          color: AppColors.black,
-                                        ),
-                                      ),
-                                      Text(
-                                        "05/06/2025",
-                                        style: TextStyle(
-                                          fontSize: 12.sp,
-                                          fontWeight: FontWeight.w600,
-                                          color: AppColors.gery,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  Column(
-                                    children: [
-                                      Text(
-                                        "Date",
-                                        style: TextStyle(
-                                          fontSize: 14.sp,
-                                          fontWeight: FontWeight.w600,
-                                          color: AppColors.black,
-                                        ),
-                                      ),
-                                      Text(
-                                        "05/06/2025",
-                                        style: TextStyle(
-                                          fontSize: 12.sp,
-                                          fontWeight: FontWeight.w600,
-                                          color: AppColors.gery,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
+                    const BirthdayPlatterCard(),
+                  
                     Gap(12.h),
                     Card(
                       color: AppColors.white,
@@ -272,7 +98,7 @@ class DetailView extends StatelessWidget {
                       elevation: 2,
                       child: ListTile(
                         leading: Icon(
-                          Icons.file_copy_rounded,
+                          Icons.file_copy_outlined,
                           color: AppColors.deepPurpleAlternate,
                           size: 28.sp,
                         ),
@@ -302,45 +128,12 @@ class DetailView extends StatelessWidget {
                       ),
                     ),
                     Gap(10.h),
-                    Image.asset("assets/images/banner.png",
-                        width: double.infinity),
+                   const TryBeforeCard(),
                     Gap(12.h),
-                    Text(
-                      "Experience our services",
-                      style: TextStyle(
-                        fontSize: 18.sp,
-                        fontWeight: FontWeight.w600,
-                        color: AppColors.black,
-                      ),
-                    ),
+                   const ExperienceServicesSlider(),
                     Gap(12.h),
-                    SizedBox(
-                      height: 200,
-                      child: ListView.separated(
-                        scrollDirection: Axis.horizontal,
-                        padding: EdgeInsets.symmetric(horizontal: 8.w),
-                        itemCount: 4,
-                        separatorBuilder: (_, __) => SizedBox(width: 8.w),
-                        itemBuilder: (context, index) {
-                          return Stack(
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(12.r),
-                                child: Image.asset(
-                                  'assets/images/productt.png',
-                                  height: 200,
-                                  width: 150,
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ],
-                          );
-                        },
-                      ),
-                    ),
-                    Gap(12.h),
-                    Image.asset("assets/images/banner_2.png",
-                        width: double.infinity),
+                    const ExclusiveConsultationCard (),
+                   
                     Gap(12.h),
                     Text(
                       "Hear from our customers",
@@ -423,9 +216,8 @@ class DetailView extends StatelessWidget {
                         },
                       ),
                     ),
-                    const Gap(12),
-                    Image.asset("assets/images/shear.png",
-                        width: double.infinity),
+                    const  Gap(12),
+                  const ShareWithFriendsCard(),
                     const Gap(8),
                     Card(
                       color: AppColors.white,

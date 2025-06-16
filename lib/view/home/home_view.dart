@@ -1,6 +1,6 @@
-import 'package:creaftmyplate/utils/appcolor.dart';
-import 'package:creaftmyplate/view/home/widget/custom_card.dart';
-import 'package:creaftmyplate/view/home/widget/top_widget.dart';
+import 'package:creaftmyplate/utils/app_color.dart';
+import 'package:creaftmyplate/view/home/widget/detail_view/custom_card.dart';
+import 'package:creaftmyplate/view/home/widget/home/top_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
@@ -54,11 +54,11 @@ class HomeView extends StatelessWidget {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        "Meal Boxr",
+                                        "Meal Box",
                                         style: TextStyle(
                                           fontSize: 16.sp,
                                           color: AppColors.black,
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w700,
                                         ),
                                       ),
                                       Gap(8.h),
@@ -103,11 +103,11 @@ class HomeView extends StatelessWidget {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        "Meal Boxr",
+                                        "Catering",
                                         style: TextStyle(
                                           fontSize: 16.sp,
                                           color: AppColors.black,
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w700,
                                         ),
                                       ),
                                       Gap(8.h),
@@ -122,8 +122,6 @@ class HomeView extends StatelessWidget {
                                     ],
                                   ),
                                 ),
-
-                                // Image at bottom-right
                                 Positioned(
                                   bottom: 0,
                                   right: 0,
@@ -134,8 +132,6 @@ class HomeView extends StatelessWidget {
                                     fit: BoxFit.contain,
                                   ),
                                 ),
-
-                                // Black label at top-left
                                 Positioned(
                                   bottom: 20,
                                   left: 0,
@@ -170,22 +166,22 @@ class HomeView extends StatelessWidget {
                   Row(
                     children: [
                       DeliveryBoxCard(
-                        title: "Find My platter",
+                        title: "Find My\n platter",
                         imagePath: "assets/images/shif.png",
                         imageHeight: screenHeight * 0.1,
-                        imageWidth: screenWidth * 0.2,
+                        imageWidth: screenWidth * 0.22,
                       ),
                       DeliveryBoxCard(
-                        title: "Platter",
+                        title: "Create\n Menu",
                         imagePath: "assets/images/shif.png",
                         imageHeight: screenHeight * 0.1,
-                        imageWidth: screenWidth * 0.2,
+                        imageWidth: screenWidth * 0.22,
                       ),
                       DeliveryBoxCard(
-                        title: "Platter",
+                        title: "Discounted\n Platters",
                         imagePath: "assets/images/shif.png",
                         imageHeight: screenHeight * 0.1,
-                        imageWidth: screenWidth * 0.2,
+                        imageWidth: screenWidth * 0.22,
                       ),
                     ],
                   ),
@@ -193,8 +189,6 @@ class HomeView extends StatelessWidget {
               ),
             ),
           ),
-
-          /// Fixed footer
           Positioned(
             bottom: 50,
             left: 16,
